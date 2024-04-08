@@ -9,6 +9,8 @@ export default defineNuxtConfig({
     '@nuxtjs/color-mode',
     '@vite-pwa/nuxt',
     '@nuxt/eslint',
+    '@nuxt/image',
+    '@nuxt/ui',
   ],
 
   experimental: {
@@ -34,7 +36,7 @@ export default defineNuxtConfig({
       },
     },
     prerender: {
-      crawlLinks: false,
+      crawlLinks: true,
       routes: ['/'],
       ignore: ['/hi'],
     },
@@ -45,8 +47,8 @@ export default defineNuxtConfig({
       viewport: 'width=device-width,initial-scale=1',
       link: [
         { rel: 'icon', href: '/favicon.ico', sizes: 'any' },
-        { rel: 'icon', type: 'image/svg+xml', href: '/nuxt.svg' },
-        { rel: 'apple-touch-icon', href: '/apple-touch-icon.png' },
+        { rel: 'icon', type: 'image/png', href: '/assets/images/logo.png' },
+        { rel: 'apple-touch-icon', href: '/assets/images/logo.png' },
       ],
       meta: [
         { name: 'viewport', content: 'width=device-width, initial-scale=1' },
