@@ -25,14 +25,24 @@ onMounted(() => {
 </script>
 
 <template>
-  <UCarousel
-    ref="carouselRef"
-    v-slot="{ item }"
-    :items="items"
-    :ui="{ item: 'pr-1' }"
-    class="overflow-hidden h-xl "
-    indicators
-  >
-    <img :src="item" class="w-full" draggable="false">
-  </UCarousel>
+  <div>
+    <UCarousel
+      ref="carouselRef"
+      v-slot="{ item }"
+      :items="items"
+      :ui="{ item: 'pr-1' }"
+      class="overflow-hidden"
+      indicators
+    >
+      <img :src="item" class="w-full" draggable="false">
+    </UCarousel>
+    <div class="container">
+      <div class="mx-a w-xl">
+        <h1 class="text-3xl font-500 w-2xl">
+          Център за естетична и холистична медицина Adoree
+        </h1>
+        <address>София, бул. Патриарх Евтимий 1, в клиника Юниордент, етаж 1</address>
+      </div>
+    </div>
+  </div>
 </template>
