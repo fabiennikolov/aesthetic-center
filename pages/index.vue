@@ -1,10 +1,10 @@
 <script setup lang="ts">
 const items = [
-  'https://studio24.bg/pictures/studios/1/1280/thumbs/0x346/19949.jpg',
-  'https://studio24.bg/pictures/studios/1/1280/thumbs/0x346/66295.jpg',
-  'https://studio24.bg/pictures/studios/1/1280/thumbs/0x346/19952.jpg',
-  'https://studio24.bg/pictures/studios/1/1280/thumbs/0x346/19944.jpg',
-  'https://studio24.bg/pictures/studios/1/1280/thumbs/0x346/19946.jpg',
+  'http://localhost:3000/_nuxt/assets/images/2.webp',
+  'http://localhost:3000/_nuxt/assets/images/1.webp',
+  'http://localhost:3000/_nuxt/assets/images/12.webp',
+  'http://localhost:3000/_nuxt/assets/images/4.webp',
+  'http://localhost:3000/_nuxt/assets/images/11.webp',
 ]
 
 const carouselRef = ref()
