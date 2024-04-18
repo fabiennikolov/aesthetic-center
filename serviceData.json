@@ -1,0 +1,96 @@
+[
+  {
+    "Лице": {
+      "variants": [
+        {
+          "name": "Мануално почистване",
+          "price": 80,
+          "subVariants": [
+            {
+              "name": "Sub Variant 1",
+              "price": 20,
+              "options": [
+                { "name": "Option 1", "price": 5 },
+                { "name": "Option 2", "price": 10 }
+              ]
+            },
+            {
+              "name": "Sub Variant 2",
+              "price": 30,
+              "options": [
+                { "name": "Option 1", "price": 7 },
+                { "name": "Option 2", "price": 12 }
+              ]
+
+            }
+          ]
+        },
+        { "name": "Класическо почистване", "price": 90 },
+        { "name": "Анти-ейдж терапия", "price": 100 }
+      ]
+    },
+    "Епилация": {
+      "variants": [
+        {
+          "name": "Зона за бикини",
+          "price": 30,
+          "subVariants": [
+            {
+              "name": "Sub Variant 1",
+              "price": 15,
+              "options": [
+                { "name": "Option 1", "price": 3 },
+                { "name": "Option 2", "price": 6 }
+              ]
+            },
+            {
+              "name": "Sub Variant 2",
+              "price": 25,
+              "options": [
+                { "name": "Option 1", "price": 4 },
+                { "name": "Option 2", "price": 8 }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Цяло ръце",
+          "price": 40,
+          "subVariants": [
+            {
+              "name": "Sub Variant 1",
+              "price": 20,
+              "options": [
+                { "name": "Option 1", "price": 4 },
+                { "name": "Option 2", "price": 8 }
+              ]
+            },
+            {
+              "name": "Sub Variant 2",
+              "price": 30,
+              "options": [
+                { "name": "Option 1", "price": 6 },
+                { "name": "Option 2", "price": 12 }
+              ]
+            }
+          ]
+        },
+        { "name": "Подмишници", "price": 20 }
+      ]
+    },
+    "Масаж": {
+      "variants": [
+        { "name": "Релаксиращ масаж", "price": 70 },
+        { "name": "Шиатсу масаж", "price": 80 },
+        { "name": "Лимфодренажен масаж", "price": 90 }
+      ]
+    },
+    "Тяло": {
+      "variants": [
+        { "name": "Масаж на гръб", "price": 50 },
+        { "name": "Антицелулитен масаж", "price": 60 },
+        { "name": "Детокс терапия", "price": 70 }
+      ]
+    }
+  }
+]

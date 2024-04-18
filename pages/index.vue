@@ -1,6 +1,4 @@
 <script setup lang="ts">
-import { onMounted, ref } from 'vue'
-
 const items = [
   'https://studio24.bg/pictures/studios/1/1280/thumbs/0x346/19949.jpg',
   'https://studio24.bg/pictures/studios/1/1280/thumbs/0x346/66295.jpg',
@@ -34,15 +32,19 @@ onMounted(() => {
       class="overflow-hidden"
       indicators
     >
-      <img :src="item" class="w-full" draggable="false">
+      <img :src="item" class="w-full" draggable="false" alt="Carousel Item">
     </UCarousel>
-    <div class="container">
-      <div class="mx-a w-xl">
-        <h1 class="text-3xl font-500 w-2xl">
+
+    <div class="container mt-4">
+      <div class="mx-auto max-w-xl">
+        <h1 class="text-3xl font-semibold">
           Център за естетична и холистична медицина Adoree
         </h1>
-        <address>София, бул. Патриарх Евтимий 1, в клиника Юниордент, етаж 1</address>
+        <address class="mt-2">
+          София, бул. Патриарх Евтимий 1, в клиника Юниордент, етаж 1
+        </address>
       </div>
     </div>
+    <Services />
   </div>
 </template>
