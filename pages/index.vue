@@ -28,14 +28,14 @@ onMounted(() => {
       ref="carouselRef"
       v-slot="{ item }"
       :items="items"
-      :ui="{ item: 'pr-1' }"
+      :ui="{ item: 'sm:pr-1' }"
       class="overflow-hidden"
       indicators
     >
       <img :src="item" class="w-full" draggable="false" alt="Carousel Item">
     </UCarousel>
 
-    <div class="container mt-4">
+    <div class="container mt-4 px-4 sm:px-0">
       <div class="mx-auto max-w-xl">
         <h1 class="text-3xl font-semibold">
           Център за естетична и холистична медицина Adoree
@@ -45,6 +45,8 @@ onMounted(() => {
         </address>
       </div>
     </div>
-    <Services />
+    <Services class="sm:mb-12" />
+    <About />
+    <Location />
   </div>
 </template>

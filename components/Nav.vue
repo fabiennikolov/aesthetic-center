@@ -15,15 +15,15 @@ export default {
 
 <template>
   <div class="sticky top-0 z-50 bg-[#6e5f8d] shadow-op-25 shadow-md shadow-[#121212]">
-    <div class="mx-auto max-w-6xl px-4">
+    <div class="mx-auto max-w-6xl pr-4">
       <nav class="flex items-center justify-between">
         <NuxtLink to="/" class="inline w-24">
           <img width="400" height="400" src="~/assets/images/logo.png" alt="Лого на Кърти чисти и извозва">
         </NuxtLink>
         <div class=" gap-4 flex">
           <a
-            href="https://www.facebook.com/profile.php?id=61553176502982" target="_blank"
-            aria-label="Visit our Facebook profile" class="text-white "
+            href="https://www.facebook.com/esthetic.adoree" target="_blank"
+            aria-label="Посетете нашата Фейсбук страница" class="text-white "
           >
             <svg
               xmlns="http://www.w3.org/2000/svg" width="22" height="22" fill="currentColor"
@@ -35,7 +35,7 @@ export default {
             </svg>
           </a>
           <a
-            href="https://www.instagram.com/hblagoev21/" target="_blank" aria-label="Follow us on Instagram"
+            href="https://www.instagram.com/esthetic_adoree/?hl=bg" target="_blank" aria-label="Последвайте ни в Инстаграм"
             class="text-white"
           >
             <svg

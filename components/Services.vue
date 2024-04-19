@@ -1,42 +1,18 @@
 <script setup lang="ts">
-import serviceData from '../serviceData.json'
-import type { ServiceData, SubVariant } from '~/types'
-
-// Your existing code
 const images = [
   '/assets/images/face.png',
   '/assets/images/epilation.png',
   '/assets/images/massage.png',
   '/assets/images/body.png',
 ]
+const selectedIndex = ref < number | null > (null)
 
-const selectedDiv = ref<number | null>(null)
-const selectedVariantIndex = ref<number | null>(null)
-const divTexts = ref<ServiceData[]>(serviceData)
-const serviceNames = Object.keys(divTexts.value[0])
-
-function toggleSubVariantOptions(subVariant: SubVariant) {
-  // Check if showOptions is defined, if not, initialize it to true
-  if (typeof subVariant.showOptions === 'undefined') {
-    subVariant.showOptions = true
-  }
-  else {
-    // Toggle the value of showOptions
-    subVariant.showOptions = !subVariant.showOptions
-  }
-}
-
-function selectDiv(divNumber: number) {
-  selectedDiv.value = divNumber
-}
-
-function toggleSubVariants(idx: number) {
-  selectedVariantIndex.value = selectedVariantIndex.value === idx ? null : idx
+function selectImage(index: number) {
+  selectedIndex.value = index
 }
 
 onMounted(() => {
-  selectDiv(1)
-  selectedVariantIndex.value = 0
+  selectedIndex.value = 0
 })
 </script>
 
@@ -46,50 +22,52 @@ onMounted(() => {
   </h2>
   <div class="bg-violet-100 py-4 my-4">
     <div class="container mx-auto">
-      <div class="flex gap-4">
+      <div class="grid grid-cols-2 md:grid-cols-4 justify-center items-center w-fit mx-a gap-12">
         <div
-          v-for="divNumber in 4"
-          :key="divNumber"
-          :class="{ 'bg-blue-200': selectedDiv === divNumber }"
-          class="cursor-pointer p-4 rounded-full"
-          @click="selectDiv(divNumber)"
+          v-for="(image, index) in images" :key="index"
+          :class="{ 'bg-blue-200': selectedIndex === index }" class="p-4 rounded-full cursor-pointer"
+          @click="selectImage(index)"
         >
           <img
-            class="w-20 h-20"
-            :src="`http://localhost:3000/_nuxt/${images[divNumber - 1]}`"
+            class="sm:w-20 sm:h-20 w-24" :src="`http://localhost:3000/_nuxt/${image}`"
             alt="Снимка на Естетичен център Adoree"
           >
         </div>
       </div>
+      <template v-if="selectedIndex !== null">
+        <div class="sm:text-center mt-4 px-4">
+          <p v-if="selectedIndex === 0">
+            В нашата клиника предлагаме разнообразие от процедури за естетично подобряване на кожата на
+            лицето, които се фокусират както върху външния вид, така и върху здравето на кожата. Ние вярваме
+            в холистичния подход към красотата, който обхваща не само външния вид, но и общото
+            благосъстояние на кожата и организма.
+          </p>
+          <p v-else-if="selectedIndex === 1">
+            Ние предлагаме иновативни процедури за епилация с кола маска, които осигуряват бързи, ефективни
+            и безболезнени резултати. Нашата екипна настройка и професионален подход ви гарантират комфорт и
+            доверие по време на процедурата.
+
+            Възползвайте се от нашите услуги за различни зони на тялото, включително лице, ръце, крака и
+            интимни зони. Нашите лицензирани терапевти използват най-съвременните техники и продукти, за да
+            осигурят гладка и нежна кожа, без да причиняват дразнене или увреждане на кожата.
+
+            Запазете своя час сега и се насладете на удоволствието от гладка, безупречна кожа с нашите
+            професионални услуги за епилация с кола маска.
+          </p>
+          <p v-else-if="selectedIndex === 2">
+            Отдайте се на изключително усещане за релаксация и подобрение на кожата си с нашата
+            професионална услуга за апаратен антицелулитен масаж и термомасаж на цялото тяло. Тази
+            комбинирана терапия от 40 до 45 минути не само ще ви помогне да се освободите от натрупаните
+            токсини и напрежение, но и ще подобри кръвообращението и тонуса на кожата ви.
+          </p>
+          <p v-else-if="selectedIndex === 3">
+            Поглезете сетивата си и поддайте се на релаксация и подмладяване с нашите иновативни терапии за
+            тяло. Възползвайте се от широка гама от опции, които обхващат различни методи и технологии,
+            предназначени да ви помогнат да се освободите от целулита, да тонизирате кожата и да подобрите
+            общото си здраве и благосъстояние.
+          </p>
+        </div>
+      </template>
     </div>
-  </div>
-  <div class="container mx-a">
-    <template v-if="selectedDiv">
-      <div v-if="divTexts[0][serviceNames[selectedDiv - 1]]" class="grid grid-cols-2 gap-4">
-        <ul class="col-span-1">
-          <li v-for="(variant, idx) in divTexts[0][serviceNames[selectedDiv - 1]].variants" :key="idx">
-            <strong class="cursor-pointer" @click="toggleSubVariants(idx)">{{ variant.name }}</strong> - {{ `${variant.price}лв.` }}
-          </li>
-        </ul>
-
-        <ul class="col-span-1">
-          <template v-for="(variant, idx) in divTexts[0][serviceNames[selectedDiv - 1]].variants" :key="idx">
-            <ul v-if="variant.subVariants && selectedVariantIndex === idx">
-              <li v-for="(subVariant, subIdx) in variant.subVariants" :key="subIdx">
-                <strong class="cursor-pointer" @click="toggleSubVariantOptions(subVariant)">
-                  {{ subVariant.name }} - {{ `${subVariant.price}лв.` }}
-                </strong>
-
-                <ul v-if="subVariant.showOptions">
-                  <li v-for="(option, optIdx) in subVariant.options" :key="optIdx">
-                    {{ option.name }} - {{ `${option.price}лв.` }}
-                  </li>
-                </ul>
-              </li>
-            </ul>
-          </template>
-        </ul>
-      </div>
-    </template>
   </div>
 </template>
