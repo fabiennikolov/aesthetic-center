@@ -36,7 +36,7 @@ onMounted(() => {
             София, бул. Патриарх Евтимий 1, в клиника Юниордент, етаж 1
           </address>
         </div>
-        <a class="block bg-[#6e5f9d] text-white border-violet-500 border-2 rounded-md h-fit w-fit px-2 py-2" href="https://studio24.bg/tsentar-za-estetichna-i-holistichna-meditsina-adoree-s1280?m&" target="_blank" alt="Линк за резервация"><button>Запази Час</button></a>
+        <a class="block mt-4 bg-[#6e5f9d] text-white border-violet-500 border-2 rounded-md h-fit w-fit px-2 py-2" href="https://studio24.bg/tsentar-za-estetichna-i-holistichna-meditsina-adoree-s1280?m&" target="_blank" alt="Линк за резервация"><button>Запази Час</button></a>
       </div>
     </div>
     <Services class="sm:mb-12" />
