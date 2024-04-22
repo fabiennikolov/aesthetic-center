@@ -1,10 +1,4 @@
 <script setup lang="ts">
-const images = [
-  '/assets/images/face.png',
-  '/assets/images/epilation.png',
-  '/assets/images/massage.png',
-  '/assets/images/body.png',
-]
 const selectedIndex = ref < number | null > (null)
 
 function selectImage(index: number) {
@@ -24,12 +18,49 @@ onMounted(() => {
     <div class="container mx-auto">
       <div class="grid grid-cols-2 md:grid-cols-4 justify-center items-center w-fit mx-a gap-12">
         <div
-          v-for="(image, index) in images" :key="index"
-          :class="{ 'bg-blue-200': selectedIndex === index }" class="p-4 rounded-full cursor-pointer"
-          @click="selectImage(index)"
+          :class="{ 'bg-blue-200': selectedIndex === 0 }"
+          class="p-4 rounded-full cursor-pointer"
+          @click="selectImage(0)"
         >
           <img
-            class="sm:w-20 sm:h-20 w-24" :src="`http://localhost:3000/_nuxt/${image}`"
+            class="sm:w-20 sm:h-20 w-24"
+            src="/assets/images/face.png"
+            alt="Снимка на Естетичен център Adoree"
+          >
+        </div>
+        <!-- Second image -->
+        <div
+          :class="{ 'bg-blue-200': selectedIndex === 1 }"
+          class="p-4 rounded-full cursor-pointer"
+          @click="selectImage(1)"
+        >
+          <img
+            class="sm:w-20 sm:h-20 w-24"
+            src="/assets/images/epilation.png"
+            alt="Снимка на Естетичен център Adoree"
+          >
+        </div>
+        <!-- Third image -->
+        <div
+          :class="{ 'bg-blue-200': selectedIndex === 2 }"
+          class="p-4 rounded-full cursor-pointer"
+          @click="selectImage(2)"
+        >
+          <img
+            class="sm:w-20 sm:h-20 w-24"
+            src="/assets/images/massage.png"
+            alt="Снимка на Естетичен център Adoree"
+          >
+        </div>
+        <!-- Fourth image -->
+        <div
+          :class="{ 'bg-blue-200': selectedIndex === 3 }"
+          class="p-4 rounded-full cursor-pointer"
+          @click="selectImage(3)"
+        >
+          <img
+            class="sm:w-20 sm:h-20 w-24"
+            src="/assets/images/body.png"
             alt="Снимка на Естетичен център Adoree"
           >
         </div>
