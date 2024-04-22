@@ -17,7 +17,7 @@ onMounted(() => {
 </script>
 
 <template>
-  <h2 class="font-bold text-2xl text-center mt-8">
+  <h2 class="font-bold text-2xl text-center mt-8 text-black dark:text-black">
     Налични Услуги
   </h2>
   <div class="bg-violet-100 py-4 my-4">
