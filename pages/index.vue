@@ -1,12 +1,4 @@
 <script setup lang="ts">
-const items = [
-  'http://localhost:3000/_nuxt/assets/images/2.webp',
-  'http://localhost:3000/_nuxt/assets/images/1.webp',
-  'http://localhost:3000/_nuxt/assets/images/12.webp',
-  'http://localhost:3000/_nuxt/assets/images/4.webp',
-  'http://localhost:3000/_nuxt/assets/images/11.webp',
-]
-
 const carouselRef = ref()
 
 onMounted(() => {
@@ -24,25 +16,27 @@ onMounted(() => {
 
 <template>
   <div>
-    <UCarousel
-      ref="carouselRef"
-      v-slot="{ item }"
-      :items="items"
-      :ui="{ item: 'sm:pr-1' }"
-      class="overflow-hidden"
-      indicators
-    >
-      <img :src="item" class="w-full" draggable="false" alt="Carousel Item">
-    </UCarousel>
+    <div class="carousel-container">
+      <div class="h-sm flex overflow-x-hidden carousel-wrapper">
+        <img src="~/assets/images/1.webp" class="w-full" draggable="false" alt="Carousel Item">
+        <img src="~/assets/images/11.webp" class="w-full" draggable="false" alt="Carousel Item">
+        <img src="~/assets/images/12.webp" class="w-full" draggable="false" alt="Carousel Item">
+        <img src="~/assets/images/4.webp" class="w-full" draggable="false" alt="Carousel Item">
+        <img src="~/assets/images/2.webp" class="w-full" draggable="false" alt="Carousel Item">
+      </div>
+    </div>
 
     <div class="container mt-4 px-4 sm:px-0">
-      <div class="mx-auto max-w-xl">
-        <h1 class="text-3xl font-semibold">
-          Център за естетична и холистична медицина Adoree
-        </h1>
-        <address class="mt-2">
-          София, бул. Патриарх Евтимий 1, в клиника Юниордент, етаж 1
-        </address>
+      <div class="flex justify-between">
+        <div class="mx-auto">
+          <h1 class="text-3xl font-semibold">
+            Център за естетична и холистична медицина Adoree
+          </h1>
+          <address class="mt-2">
+            София, бул. Патриарх Евтимий 1, в клиника Юниордент, етаж 1
+          </address>
+        </div>
+        <a class="bg-[#6e5f9d] text-white border-violet-500 border-2 rounded-md h-fit w-fit px-2 py-2" href="https://studio24.bg/tsentar-za-estetichna-i-holistichna-meditsina-adoree-s1280?m&" target="_blank" alt="Линк за резервация"><button>Запази Час</button></a>
       </div>
     </div>
     <Services class="sm:mb-12" />
