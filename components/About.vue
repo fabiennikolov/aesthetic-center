@@ -7,7 +7,7 @@
           ЗА ЦЕНТЪР ЗА ЕСТЕТИЧНА И ХОЛИСТИЧНА МЕДИЦИНА ADOREE
         </h3>
       </div>
-      <p class="sm:text-4.5 font-sans">
+      <p class="sm:text-4.5 font-sans text-black dark:text-black">
         Естетичен център Adoree се намира на комуникативно място в центъра на София и предлага грижа за
         цялостната Ви
         визия в луксозна обстановка от добри професионалисти. Тук ще получите професионален и индивидуален съвет
@@ -19,8 +19,8 @@
         перманентния грим и още... тук ще получите грижа за цялостната Ви визия. Доверете се на качеството!
       </p>
     </div>
-    <div class="grid-cols-1">
-      <div class="flex items-center sm:pb-12 pb-4">
+    <div class="grid-cols-1 text-black dark:text-black">
+      <div class="flex items-center sm:pb-12 pb-4 ">
         <svg class="text-[#6e5f8d] w-12 h-12" xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24">
           <path
             fill="currentColor"

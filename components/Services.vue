@@ -35,7 +35,7 @@ onMounted(() => {
         </div>
       </div>
       <template v-if="selectedIndex !== null">
-        <div class="sm:text-center mt-4 px-4">
+        <div class="sm:text-center mt-4 px-4 text-black dark:text-black">
           <p v-if="selectedIndex === 0">
             В нашата клиника предлагаме разнообразие от процедури за естетично подобряване на кожата на
             лицето, които се фокусират както върху външния вид, така и върху здравето на кожата. Ние вярваме

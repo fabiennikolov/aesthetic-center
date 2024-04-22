@@ -28,7 +28,7 @@ onMounted(() => {
 
     <div class="container mt-4 px-4 sm:px-0">
       <div class="sm:flex justify-between">
-        <div class="mx-auto">
+        <div class="mx-auto text-black">
           <h1 class="text-3xl font-semibold">
             Център за естетична и холистична медицина Adoree
           </h1>
