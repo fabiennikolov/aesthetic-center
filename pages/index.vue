@@ -15,7 +15,7 @@ onMounted(() => {
 </script>
 
 <template>
-  <div class="bg-white">
+  <div class="bg-white dark:bg-white">
     <div class="carousel-container">
       <div class="h-sm flex overflow-x-hidden carousel-wrapper">
         <img src="~/assets/images/1.webp" class="w-full" draggable="false" alt="Carousel Item">
