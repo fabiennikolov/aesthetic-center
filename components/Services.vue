@@ -11,19 +11,19 @@ onMounted(() => {
 </script>
 
 <template>
-  <h2 class="font-bold text-2xl text-center mt-8 text-black dark:text-black">
+  <h2 class="mt-8 text-center text-2xl text-black font-bold dark:text-black">
     Налични Услуги
   </h2>
-  <div class="bg-violet-100 py-4 my-4">
-    <div class="container mx-auto">
-      <div class="grid grid-cols-2 md:grid-cols-4 justify-center items-center w-fit mx-a gap-12">
+  <div class="my-4 bg-violet-100 py-4">
+    <div class="mx-auto container">
+      <div class="grid grid-cols-2 mx-a w-fit items-center justify-center gap-12 md:grid-cols-4">
         <div
           :class="{ 'bg-blue-200': selectedIndex === 0 }"
-          class="p-4 rounded-full cursor-pointer"
+          class="cursor-pointer rounded-full p-4"
           @click="selectImage(0)"
         >
           <img
-            class="sm:w-20 sm:h-20 w-24"
+            class="w-24 sm:h-20 sm:w-20"
             src="/assets/images/face.png"
             alt="Снимка на Естетичен център Adoree"
           >
@@ -31,11 +31,11 @@ onMounted(() => {
         <!-- Second image -->
         <div
           :class="{ 'bg-blue-200': selectedIndex === 1 }"
-          class="p-4 rounded-full cursor-pointer"
+          class="cursor-pointer rounded-full p-4"
           @click="selectImage(1)"
         >
           <img
-            class="sm:w-20 sm:h-20 w-24"
+            class="w-24 sm:h-20 sm:w-20"
             src="/assets/images/epilation.png"
             alt="Снимка на Естетичен център Adoree"
           >
@@ -43,11 +43,11 @@ onMounted(() => {
         <!-- Third image -->
         <div
           :class="{ 'bg-blue-200': selectedIndex === 2 }"
-          class="p-4 rounded-full cursor-pointer"
+          class="cursor-pointer rounded-full p-4"
           @click="selectImage(2)"
         >
           <img
-            class="sm:w-20 sm:h-20 w-24"
+            class="w-24 sm:h-20 sm:w-20"
             src="/assets/images/massage.png"
             alt="Снимка на Естетичен център Adoree"
           >
@@ -55,18 +55,18 @@ onMounted(() => {
         <!-- Fourth image -->
         <div
           :class="{ 'bg-blue-200': selectedIndex === 3 }"
-          class="p-4 rounded-full cursor-pointer"
+          class="cursor-pointer rounded-full p-4"
           @click="selectImage(3)"
         >
           <img
-            class="sm:w-20 sm:h-20 w-24"
+            class="w-24 sm:h-20 sm:w-20"
             src="/assets/images/body.png"
             alt="Снимка на Естетичен център Adoree"
           >
         </div>
       </div>
       <template v-if="selectedIndex !== null">
-        <div class="sm:text-center mt-4 px-4 text-black dark:text-black">
+        <div class="mt-4 px-4 text-black sm:text-center dark:text-black">
           <p v-if="selectedIndex === 0">
             В нашата клиника предлагаме разнообразие от процедури за естетично подобряване на кожата на
             лицето, които се фокусират както върху външния вид, така и върху здравето на кожата. Ние вярваме

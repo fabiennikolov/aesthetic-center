@@ -1,10 +1,10 @@
 <template>
-  <div class="flex flex-col items-center bg-zinc-50 text-center text-surface dark:bg-violet-400 dark:text-white">
-    <div class="container px-6 pt-6">
+  <div class="text-surface flex flex-col items-center bg-zinc-50 text-center dark:bg-violet-400 dark:text-white">
+    <div class="px-6 pt-6 container">
       <div class="mb-6 flex justify-center space-x-2">
         <a
           href="https://www.facebook.com/esthetic.adoree" type="button" target="_blank"
-          class="rounded-full bg-[#3b5998] p-3 uppercase leading-normal text-white shadow-dark-3 shadow-black/30 transition duration-150 ease-in-out hover:shadow-dark-1 focus:shadow-dark-1 focus:outline-none focus:ring-0 active:shadow-1 dark:text-white"
+          class="active:shadow-1 rounded-full bg-[#3b5998] p-3 text-white leading-normal uppercase shadow-black/30 shadow-dark-3 transition duration-150 ease-in-out dark:text-white focus:shadow-dark-1 hover:shadow-dark-1 focus:outline-none focus:ring-0"
           data-twe-ripple-init data-twe-ripple-color="light"
         >
           <span class="[&>svg]:h-5 [&>svg]:w-5">
@@ -17,7 +17,7 @@
         </a>
         <a
           href="https://www.instagram.com/esthetic_adoree/?hl=bg" type="button" target="_blank"
-          class="rounded-full bg-[#ac2bac] p-3 uppercase leading-normal text-white shadow-dark-3 shadow-black/30 transition duration-150 ease-in-out hover:shadow-dark-1 focus:shadow-dark-1 focus:outline-none focus:ring-0 active:shadow-1 dark:text-white"
+          class="active:shadow-1 rounded-full bg-[#ac2bac] p-3 text-white leading-normal uppercase shadow-black/30 shadow-dark-3 transition duration-150 ease-in-out dark:text-white focus:shadow-dark-1 hover:shadow-dark-1 focus:outline-none focus:ring-0"
           data-twe-ripple-init data-twe-ripple-color="light"
         >
           <span class="mx-auto [&>svg]:h-5 [&>svg]:w-5">

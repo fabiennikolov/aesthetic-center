@@ -14,16 +14,16 @@ export default {
 </script>
 
 <template>
-  <div class="sticky top-0 z-50 bg-[#6e5f8d] shadow-op-25 shadow-md shadow-[#121212]">
+  <div class="sticky top-0 z-50 bg-[#6e5f8d] shadow-[#121212] shadow-md shadow-op-25">
     <div class="mx-auto max-w-6xl pr-4">
       <nav class="flex items-center justify-between">
         <NuxtLink to="/" class="inline w-24">
           <img width="400" height="400" src="~/assets/images/logo.png" alt="Лого на Кърти чисти и извозва">
         </NuxtLink>
-        <div class=" gap-4 flex">
+        <div class="flex gap-4">
           <a
             href="https://www.facebook.com/esthetic.adoree" target="_blank"
-            aria-label="Посетете нашата Фейсбук страница" class="text-white "
+            aria-label="Посетете нашата Фейсбук страница" class="text-white"
           >
             <svg
               xmlns="http://www.w3.org/2000/svg" width="22" height="22" fill="currentColor"
